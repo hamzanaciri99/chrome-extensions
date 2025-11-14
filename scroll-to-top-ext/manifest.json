@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Scroll To Top Button",
+  "description": "Adds a floating button on pages that scrolls you back to the top.",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+  ,
+  "web_accessible_resources": [
+    {
+      "resources": ["up-arrow.svg"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

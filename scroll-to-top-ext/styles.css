@@ -1,0 +1,45 @@
+/* Floating scroll-to-top button styles */
+#stt-button {
+  position: fixed !important;
+  right: 20px !important;
+  bottom: 20px !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 24px !important;
+  background: #0b76ff !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 6px 18px rgba(11, 118, 255, 0.35) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  opacity: 0 !important;
+  transform: translateY(10px) scale(0.98) !important;
+  transition: opacity 180ms ease, transform 180ms ease !important;
+  z-index: 2147483647 !important; /* max to stay on top */
+  padding: 0 !important;
+}
+
+#stt-button.stt-visible {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+#stt-button:focus {
+  outline: 3px solid rgba(11, 118, 255, 0.18) !important;
+}
+
+#stt-button:hover {
+  background: #095ecb !important;
+}
+
+/* Minor reset in case pages style the button tag globally */
+button#stt-button::-moz-focus-inner { border: 0; }
+
+/* Ensure the icon fits nicely */
+#stt-button img {
+  width: 22px !important;
+  height: 22px !important;
+  display: block !important;
+}
